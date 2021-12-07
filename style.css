@@ -1,12 +1,14 @@
 body{
-  width: 1200px;
-  margin: 0 auto;
+margin: 0px;
+padding: 0px;
 }
 
-.container{ 
-    margin: 0 auto;
-    max-width: 1200px;
+.container{
+    height: 100px;;
+}
 
+.header-bar-menu{
+    display: none;
 }
 
 .header{
@@ -16,8 +18,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-
 }
 
 .fas{
@@ -26,6 +26,7 @@ body{
 
 .logo-band{
     width: 100px;
+    justify-self: center;
 }
 
 .header-nav{
@@ -74,21 +75,36 @@ body{
 
 
 @media screen and (max-width: 660px){
+    .body{
+        width: 100%;
+    }
+
+    .fas{
+        font-size: 40px;
+    }
+
+
     .header{
+        width: 100%;
+        height: 100px;
+    }
+
+    .header-bar-menu{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .header-logo{
     }
 
     .logo-band{
+        width: 300;
         left: 70px;
     }
 
     .header-nav, .header-social-icon{
         display: none;
-    }
-
-    .fas{
-        display: block;
-        font-size: 70px;
-        padding: 20px;
     }
 }
 
