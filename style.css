@@ -2,7 +2,7 @@ body{
 }
 
 .container{
-    height: 100px;;
+    max-width: 100%;
 }
 
 .header-bar-menu{
@@ -70,10 +70,8 @@ body{
 
 .album-name{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 5px 5px;
 }
 
 .album:nth-child(odd){
@@ -84,16 +82,22 @@ body{
     background-color: rgb(142, 142, 182);
 }
 
-.album{
-    flex-wrap: wrap;
-    border: 1px solid black;
-    margin: 5px 5px;
-    width: max-content;
-    height: 150px;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
+.depriving_regret{
+    width: 100%;
+    object-position: center;
 }
+
+.album{
+    max-width: 15%;
+    margin: 5px 5px;
+}
+
+.photo-album{
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
 
 
 
