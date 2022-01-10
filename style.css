@@ -69,11 +69,16 @@ body{
 }
 
 .album-name{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 4fr);
+    align-items: center;
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+    
 }
 
+/*
 .album:nth-child(odd){
     background-color: rgb(93, 230, 223);
 }
@@ -81,15 +86,18 @@ body{
 .album:nth-child(even){
     background-color: rgb(142, 142, 182);
 }
+*/
 
 .depriving_regret{
-    width: 100%;
+    max-width: 100%;
     object-position: center;
+    object-fit: cover;
 }
 
 .album{
-    max-width: 15%;
+    max-width: 50%;
     margin: 5px 5px;
+    justify-self: center;
 }
 
 .photo-album{
@@ -107,7 +115,12 @@ body{
 
 
 
-
+@media screen and (max-width: 1024px){
+    .album-name{
+        grid-template-columns:repeat(2, 1fr) ;
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
 
 
 
@@ -147,6 +160,23 @@ body{
 
     .header-nav, .header-social-icon{
         display: none;
+    }
+
+    .album{
+        max-width: 70%;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+    .album-name{
+        grid-template-columns:repeat(1, 1fr) ;
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .album{
+        max-width: 100%;
     }
 }
 
